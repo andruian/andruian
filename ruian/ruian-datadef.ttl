@@ -1,0 +1,62 @@
+@prefix andr: <http://example.andruian.com/ontology/> .
+@prefix ruian: <http://ruian.linked.opendata.cz/ontology/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix s: <http://schema.org/> .
+@prefix ex: <http://example.org/>
+@prefix : <http://foo/>
+
+:dataDef
+    a                 andr:DataDef;
+    andr:locationDef  :locationDef;
+    andr:dataClassDef :dataClassDef;
+    .
+
+#
+# DATA DEFINITION
+#
+:dataClassDef
+    a                        andr:DataClassDef;
+    andr:sparqlEndpoint      <http://localhost:3030/foo/query>;
+    andr:class               ex:MyObject;
+    andr:pathToLocationClass [ a sp:SeqPath;
+                               sp:path1 ex:someLink;
+                               sp:path2 ex:linksTo;
+                             ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "labelForIdProperty";
+                          sp:path [ a        sp:SeqPath;
+                                    sp:path1 ex:id
+                                  ];
+                        ];
+    .
+
+
+#
+# LOCATION DEFINITON
+#
+:locationDef
+    a                   andr:LocationDef;
+    andr:sparqlEndpoint <http://ruian.linked.opendata.cz/sparql>;
+    andr:class          ruian:AdresniMisto;
+    andr:classToLocPath :adresniMistoClassToLocPath;
+    .
+
+# Description of how to get from object ruian:AdresniMisto to its lat/long coordinates
+:adresniMistoClassToLocPath
+    a          andr:ClassToLocPath;
+    andr:class ruian:AdresniMisto;
+    andr:lat   [ a sp:SeqPath;
+                 sp:path1 ruian:adresniBod;
+                 sp:path2 [
+                     sp:path1 s:geo;
+                     sp:path2 s:latitude;
+                 ]
+               ];
+    andr:long  [ a sp:SeqPath;
+                 sp:path1 ruian:adresniBod;
+                 sp:path2 [
+                     sp:path1 s:geo;
+                     sp:path2 s:longitude;
+                 ]
+               ];
+    .
