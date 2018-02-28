@@ -4,11 +4,11 @@
 
 RDF data defining some testing objects and linking them to RUIAN:
 
-`ex:linkedobject-###### a ex:MyObject`
+- `ex:linkedobject-###### a ex:MyObject`
     - `ex:id`       contains the same number as url
     - `ex:someLink` links to sublinkObjects (below)
     
-`ex:sublinkObject-#####`
+- `ex:sublinkObject-#####`
     - `ex:linksTo`  links to RUIAN object of type AdresniMisto, 
       [example resource](http://ruian.linked.opendata.cz/resource/adresni-mista/72715057) 
 
