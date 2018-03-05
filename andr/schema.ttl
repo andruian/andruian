@@ -1,0 +1,31 @@
+@prefix andr: <http://andruian.cz/ontology/datadef#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix s: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+andr:DataDef a rdfs:Class;
+    rdfs:label "";
+    rdfs:comment "";
+    .
+    
+andr:LocationClassDef a rdfs:Class;
+    rdfs:label "";
+    rdfs:comment "";
+    .
+    
+andr:DataClassDef a rdfs:Class;
+    rdfs:label "";
+    rdfs:comment "";
+    .
+    
+andr:SelectPropertyDef a rdfs:Class;
+    rdfs:label "";
+    rdfs:comment "";
+    .
+    
+andr:IndexServer a rdfs:Class;
+    rdfs:label "";
+    rdfs:comment "";
+    .
+
+    
