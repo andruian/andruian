@@ -9,6 +9,16 @@
     a                 andr:DataDef;
     andr:locationDef  :locationDef;
     andr:dataClassDef :dataClassDef;
+    andr:indexServer  :indexServer;
+    .
+
+#
+# INDEX SERVER
+#
+:indexServer
+    a        andr:IndexServer;
+    andr:uri <http://localhost:8080>;
+    andr:version 1;
     .
 
 #
