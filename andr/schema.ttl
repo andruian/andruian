@@ -1,31 +1,148 @@
-@prefix andr: <http://andruian.cz/ontology/datadef#> .
+@prefix andr: <purl.org/net/andruian#> .
 @prefix sp: <http://spinrdf.org/sp#> .
 @prefix s: <http://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+###########
+# Classes #
+###########
+
 andr:DataDef a rdfs:Class;
-    rdfs:label "";
-    rdfs:comment "";
+    rdfs:label "DataDef";
+    rdfs:comment """The definition of a single data mapping in the Andruian framework. That is a mapping of Source class 
+instances to instances of the Location class. See https://github.com/andruian/example-data for more information.""";
     .
     
 andr:LocationClassDef a rdfs:Class;
-    rdfs:label "";
-    rdfs:comment "";
+    rdfs:label "LocationClassDef";
+    rdfs:comment """The definition of a Location class and its metadata. That includes the SPARQL endpoint where instances  
+of this class may be found and property paths specifying how to get the Location class' latitude and longitude.""";
     .
     
-andr:DataClassDef a rdfs:Class;
-    rdfs:label "";
-    rdfs:comment "";
+andr:SourceClassDef a rdfs:Class;
+    rdfs:label "SourceClassDef";
+    rdfs:comment """The definition of a Source class and its metadata. That includes the SPARQL endpoint where instances 
+of this class may be found, the property path leading to the linked Location class and properties that should be indexed 
+on the index server for faster retrieval.""";
     .
     
 andr:SelectPropertyDef a rdfs:Class;
-    rdfs:label "";
-    rdfs:comment "";
+    rdfs:label "SelectPropertyDef";
+    rdfs:comment """Definition of a Source class' property that should be indexed on the index server. The definition 
+specifies name to use for the property and a property path leading to it.""";
     .
     
 andr:IndexServer a rdfs:Class;
-    rdfs:label "";
-    rdfs:comment "";
+    rdfs:label "IndexServer";
+    rdfs:comment """An index server for the Andruian framework. It is optional - if not present, clients fall back to 
+naive queries. They are slower though.""";
     .
 
+andr:LocationClassPathsSource a rdfs:Class;
+    rdfs:label "LocationClassPathsSource";
+    rdfs:comment "A source of property paths leading from an instance of a class to its latitude and longitude.";
+    .
     
+andr:ClassToLocPath a rdfs:Class;
+    rdfs:label "ClassToLocPath";
+    rdfs:comment "A property path for a particular class leading to its latitude and longitude.";
+    .
+
+
+##############
+# Properties #
+##############
+
+#
+# DataDef 
+#
+andr:sourceClassDef a rdf:Property;
+    rdfs:label "sourceClassDef";
+    rdfs:comment "";
+    rdfs:range andr:SourceClassDef;
+    .
+ 
+andr:indexServer a rdf:Property;
+    rdfs:label "indexServer";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:uri a rdf:Property;
+    rdfs:label "uri";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:version a rdf:Property;
+    rdfs:label "version";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+# 
+# SourceClassDef 
+#    
+andr:selectProperty a rdf:Property;
+    rdfs:label "selectProperty";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:pathToLocationClass a rdf:Property;
+    rdfs:label "pathToLocationClass";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:sparqlService a rdf:Property;
+    rdfs:label "sparqlService";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:sourceClass a rdf:Property;
+    rdfs:label "sourceClass";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+
+#
+# LocationClassDef
+#
+andr:locationClassDef a rdf:Property;
+    rdfs:label "locationClassDef";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:locationClass a rdf:Property;
+    rdfs:label "locationClass";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+
+andr:locationClassPathsSource a rdf:Property;
+    rdfs:label "locationClassPathsSource";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:classToLocPath a rdf:Property;
+    rdfs:label "classToLocPath";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:latPath a rdf:Property;
+    rdfs:label "latPath";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
+    
+andr:longPath a rdf:Property;
+    rdfs:label "longPath";
+    rdfs:comment "";
+    rdfs:range andr:;
+    .
