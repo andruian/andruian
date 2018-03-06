@@ -98,6 +98,12 @@ andr:selectProperty a rdf:Property;
     rdfs:domain  andr:SourceClassDef;
     .
     
+andr:propertyPath a rdf:Property;
+    rdfs:label "propertyPath";
+    rdfs:comment """Defines a property path. The object of this property must be a SHACL predicate or sequence path. See
+https://www.w3.org/TR/shacl/#property-path-predicate for more details.""";
+    .
+    
 andr:pathToLocationClass a rdf:Property;
     rdfs:label "pathToLocationClass";
     rdfs:comment """Defines a property path that, when applied to the subject of the property, leads to an instance of 
