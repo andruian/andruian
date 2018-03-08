@@ -25,7 +25,7 @@
 # DATA DEFINITION
 #
 :sourceClassDef
-    a                        andr:DataClassDef;
+    a                        andr:SourceClassDef;
     andr:sparqlEndpoint      <http://localhost:3030/foo/query>;
     andr:class               ex:MyObject;
     andr:pathToLocationClass [ a sp:SeqPath;
