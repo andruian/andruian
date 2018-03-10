@@ -1,7 +1,12 @@
-@prefix andr: <purl.org/net/andruian#> .
+@prefix andr: <http://purl.org/net/andruian/datadef#> .
 @prefix sp: <http://spinrdf.org/sp#> .
 @prefix s: <http://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#TODO Change rdfs:label to be human-readable names, as per https://www.w3.org/2001/sw/RDFCore/Schema/200203/#ch_label
+
+#TODO add andr:includeRdf property if it ends up being used.
+#TODO maybe allow includeRdf just on the DataDef and there you have to include all external rdfs?
 
 ###########
 # Classes #
