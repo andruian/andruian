@@ -8,7 +8,7 @@
 
 :dataDef
     a                 andr:DataDef;
-    andr:locationDef  :locationDef;
+    andr:locationClassDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
     andr:indexServer  :indexServer;
     skos:prefLabel "Example data definition";
