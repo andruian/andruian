@@ -4,12 +4,14 @@
 @prefix s: <http://schema.org/> .
 @prefix ex: <http://example.org/> .
 @prefix : <http://foo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 :dataDef
     a                 andr:DataDef;
     andr:locationDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
     andr:indexServer  :indexServer;
+    skos:prefLabel "Example data definition";
     .
 
 #
@@ -28,15 +30,10 @@
     a                        andr:SourceClassDef;
     andr:sparqlEndpoint      <http://localhost:3030/foo/query>;
     andr:class               ex:MyObject;
-    andr:pathToLocationClass [ a sp:SeqPath;
-                               sp:path1 ex:someLink;
-                               sp:path2 ex:linksTo;
-                             ];
+    andr:pathToLocationClass ( ex:someLink ex:linksTo );
     andr:selectProperty [ a andr:SelectProperty;
                           s:name "labelForIdProperty";
-                          sp:path [ a        sp:SeqPath;
-                                    sp:path1 ex:id
-                                  ];
+                          sp:path ex:id
                         ];
     .
 
@@ -55,18 +52,6 @@
 :adresniMistoClassToLocPath
     a          andr:ClassToLocPath;
     andr:class ruian:AdresniMisto;
-    andr:lat   [ a sp:SeqPath;
-                 sp:path1 ruian:adresniBod;
-                 sp:path2 [
-                     sp:path1 s:geo;
-                     sp:path2 s:latitude;
-                 ]
-               ];
-    andr:long  [ a sp:SeqPath;
-                 sp:path1 ruian:adresniBod;
-                 sp:path2 [
-                     sp:path1 s:geo;
-                     sp:path2 s:longitude;
-                 ]
-               ];
+    andr:lat   ( ruian:adresniBod s:geo s:latitude );
+    andr:long  ( ruian:adresniBod s:geo s:longitude );
     .
