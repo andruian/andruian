@@ -33,7 +33,7 @@
     andr:pathToLocationClass ( ex:someLink ex:linksTo );
     andr:selectProperty [ a andr:SelectProperty;
                           s:name "labelForIdProperty";
-                          sp:path ex:id
+                          andr:propertyPath ex:id
                         ];
     .
 
