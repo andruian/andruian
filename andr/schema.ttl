@@ -5,7 +5,6 @@
 
 #TODO Change rdfs:label to be human-readable names, as per https://www.w3.org/2001/sw/RDFCore/Schema/200203/#ch_label
 
-#TODO add andr:includeRdf property if it ends up being used.
 #TODO maybe allow includeRdf just on the DataDef and there you have to include all external rdfs?
 
 ###########
@@ -77,8 +76,10 @@ andr:indexServer a rdf:Property;
     
 andr:uri a rdf:Property;
     rdfs:label "uri";
-    rdfs:comment "A link where the subject of the property can be accessed.";
-    rdfs:range rdf:Resource;
+    rdfs:comment """A link where the subject of the property can be accessed.
+
+The range of the property is a Literal and not a Resource to allow linking to IP addresses.""";
+    rdfs:range rdf:Literal;
     .
     
 andr:version a rdf:Property;
@@ -119,8 +120,10 @@ https://www.w3.org/TR/shacl/#property-path-predicate for more details.""";
     
 andr:sparqlEndpoint a rdf:Property;
     rdfs:label "sparqlEndpoint";
-    rdfs:comment "A definition of an URI where a SPARQL endpoint relevant to the property subject may be reached.";
-    rdfs:range rdf:Resource;
+    rdfs:comment """A definition of an URI where a SPARQL endpoint relevant to the property subject may be reached.
+
+The range of the property is a Literal and not a Resource to allow linking to IP addresses.""";
+    rdfs:range rdf:Literal;
     .
     
 andr:sourceClassDef a rdf:Property;
@@ -147,6 +150,18 @@ andr:locationClassPathsSource a rdf:Property;
 coordinates associated with such class. The object of this property will link to one or more property path definitions.""";
     rdfs:range andr:LocationClassPathsSource;
     rdfs:domain  andr:LocationClassDef;
+    .
+
+andr:includeRdf a rdf:Property;
+    rdfs:label "includeRdf";
+    rdfs:comment """Specifies an URL where an RDF file is located. The consumer of this dataset shall download the linked
+file and include the data contained there in their internal model before processing any other properties of the subject.
+
+This property is an analogy to import statements in programming languages - only it imports a remote file.
+
+The range of the property is a Literal and not a Resource to allow linking to IP addresses.""";
+    rdfs:range rdf:Literal;
+    rdfs:domain andr:LocationClassDef;
     .
     
 andr:classToLocPath a rdf:Property;
