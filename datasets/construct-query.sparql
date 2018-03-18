@@ -1,0 +1,39 @@
+CONSTRUCT {
+?sourceObj a <example.org/SourceObject>;
+<http://a.property> ?firstObj.
+
+?firstObj
+    a <http://example.org/FirstObject>;
+    <http://psc.org> ?psc;
+    <http://a.property> ?secondObj.
+
+?secondObj
+    a <http://example.org/SecondObject>;
+    <http://number.prop> ?streetNum;
+    <http://name.prop> ?uliceName;
+    <http://link.to.ruian> ?addrPlace.
+
+}
+WHERE {
+    ?obec a ruian:Obec;
+          s:name ?obecName.
+
+    FILTER (?obecName = "Praha")
+
+    ?ulice a ruian:Ulice;
+           ruian:obec ?obec;
+           s:name ?uliceName .
+
+    ?addrPlace a ruian:AdresniMisto;
+               ruian:ulice ?ulice;
+               ruian:psc ?psc;
+               ruian:cisloOrientacni ?streetNum.
+
+    FILTER (?streetNum < 20)
+
+    BIND ( IRI(CONCAT("http://another.com/", ENCODE_FOR_URI(?addrPlace))) as ?secondObj )
+    BIND ( IRI(CONCAT("http://example.com/", ENCODE_FOR_URI(?addrPlace))) as ?firstObj )
+    BIND ( IRI(CONCAT("http://src.com/", ENCODE_FOR_URI(?addrPlace))) as ?sourceObj )
+
+    FILTER (REGEX(?uliceName, "^[AEIOUY]"))
+}
