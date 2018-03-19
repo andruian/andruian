@@ -11,7 +11,7 @@
     andr:locationClassDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
     andr:indexServer  :indexServer;
-    skos:prefLabel "Example data definition";
+    skos:prefLabel "Vowel streets";
     .
 
 #
