@@ -6,7 +6,7 @@
 @prefix : <http://foo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-:dataDef
+:dataDefA
     a                 andr:DataDef;
     andr:locationClassDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
@@ -28,8 +28,8 @@
 #
 :sourceClassDef
     a                        andr:SourceClassDef;
-    andr:sparqlEndpoint      "http://melkamar.cz:3030/exampledata/query";
-    andr:class               <example.org/SourceObjectA>;
+    andr:sparqlEndpoint      "http://melkamar.cz:3030/test/query";
+    andr:class               <http://example.org/SourceObjectA>;
     andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
     andr:selectProperty [ a andr:SelectProperty;
                           s:name "PSC";

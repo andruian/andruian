@@ -1,0 +1,65 @@
+@prefix andr: <http://purl.org/net/andruian/datadef#> .
+@prefix ruian: <http://ruian.linked.opendata.cz/ontology/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix s: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+@prefix : <http://foo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+:dataDefAEIOUI
+    a                 andr:DataDef;
+    andr:locationClassDef  :locationDef;
+    andr:sourceClassDef :sourceClassDef;
+    andr:indexServer  :indexServer;
+    skos:prefLabel "Example data definition";
+    .
+
+#
+# INDEX SERVER
+#
+:indexServer
+    a        andr:IndexServer;
+    andr:uri "http://melkamar.cz:8080";
+    andr:version 1;
+    .
+
+#
+# DATA DEFINITION
+#
+:sourceClassDef
+    a                        andr:SourceClassDef;
+    andr:sparqlEndpoint      "http://melkamar.cz:3030/test/query";
+    andr:class               <http://example.org/SourceObjectAEIOU>;
+    andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "PSC";
+                          andr:propertyPath ( <http://a.property> <http://psc.org> )
+                        ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "StreetNum";
+                          andr:propertyPath ( <http://a.property> <http://a.property> <http://number.prop> )
+                        ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "StreetName";
+                          andr:propertyPath ( <http://a.property> <http://a.property> <http://name.prop> )
+                        ];
+    .
+
+
+#
+# LOCATION DEFINITON
+#
+:locationDef
+    a                   andr:LocationDef;
+    andr:sparqlEndpoint "http://ruian.linked.opendata.cz/sparql";
+    andr:class          ruian:AdresniMisto;
+    andr:classToLocPath :adresniMistoClassToLocPath;
+    .
+
+# Description of how to get from object ruian:AdresniMisto to its lat/long coordinates
+:adresniMistoClassToLocPath
+    a          andr:ClassToLocPath;
+    andr:class ruian:AdresniMisto;
+    andr:lat   ( ruian:adresniBod s:geo s:latitude );
+    andr:long  ( ruian:adresniBod s:geo s:longitude );
+    .
