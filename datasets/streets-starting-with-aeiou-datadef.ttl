@@ -1,17 +1,17 @@
 @prefix andr: <http://purl.org/net/andruian/datadef#> .
-@prefix ruian: <http://ruian.linked.opendata.cz/ontology/> .
+@prefix ruian: <https://ruian.linked.opendata.cz/slovník/> .
 @prefix sp: <http://spinrdf.org/sp#> .
 @prefix s: <http://schema.org/> .
 @prefix ex: <http://example.org/> .
 @prefix : <http://foo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-:dataDefAEIOUI
+:dataDefVowel
     a                 andr:DataDef;
     andr:locationClassDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
     andr:indexServer  :indexServer;
-    skos:prefLabel "Example data definition";
+    skos:prefLabel "Vowel street names";
     .
 
 #
@@ -28,7 +28,7 @@
 #
 :sourceClassDef
     a                        andr:SourceClassDef;
-    andr:sparqlEndpoint      "http://melkamar.cz:3030/test/query";
+    andr:sparqlEndpoint      "http://melkamar.cz:3030/https/query";
     andr:class               <http://example.org/SourceObjectAEIOU>;
     andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
     andr:selectProperty [ a andr:SelectProperty;
@@ -51,15 +51,15 @@
 #
 :locationDef
     a                   andr:LocationDef;
-    andr:sparqlEndpoint "http://ruian.linked.opendata.cz/sparql";
-    andr:class          ruian:AdresniMisto;
+    andr:sparqlEndpoint "https://ruian.linked.opendata.cz/sparql";
+    andr:class          ruian:AdresníMísto;
     andr:classToLocPath :adresniMistoClassToLocPath;
     .
 
 # Description of how to get from object ruian:AdresniMisto to its lat/long coordinates
 :adresniMistoClassToLocPath
     a          andr:ClassToLocPath;
-    andr:class ruian:AdresniMisto;
-    andr:lat   ( ruian:adresniBod s:geo s:latitude );
-    andr:long  ( ruian:adresniBod s:geo s:longitude );
+    andr:class ruian:AdresníMísto;
+    andr:lat   ( ruian:adresníBod s:geo s:latitude );
+    andr:long  ( ruian:adresníBod s:geo s:longitude );
     .

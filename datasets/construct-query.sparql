@@ -1,6 +1,8 @@
 CONSTRUCT {
-?sourceObj a <example.org/SourceObject>;
-<http://a.property> ?firstObj.
+?sourceObj a <http://example.org/SourceObjectA>;
+<http://a.property> ?firstObj;
+<http://www.w3.org/2004/02/skos/core#prefLabel> ?aLabel
+.
 
 ?firstObj
     a <http://example.org/FirstObject>;
@@ -16,24 +18,26 @@ CONSTRUCT {
 }
 WHERE {
     ?obec a ruian:Obec;
-          s:name ?obecName.
+          schema:name ?obecName.
 
-    FILTER (?obecName = "Praha")
+    FILTER (STR(?obecName) = "Praha")
 
     ?ulice a ruian:Ulice;
            ruian:obec ?obec;
-           s:name ?uliceName .
+           schema:name ?uliceName .
 
-    ?addrPlace a ruian:AdresniMisto;
+    ?addrPlace a ruian:AdresníMísto;
                ruian:ulice ?ulice;
-               ruian:psc ?psc;
-               ruian:cisloOrientacni ?streetNum.
+               ruian:psč ?psc;
+               ruian:čísloOrientační ?streetNum.
 
     FILTER (?streetNum < 20)
 
     BIND ( IRI(CONCAT("http://another.com/", ENCODE_FOR_URI(?addrPlace))) as ?secondObj )
     BIND ( IRI(CONCAT("http://example.com/", ENCODE_FOR_URI(?addrPlace))) as ?firstObj )
     BIND ( IRI(CONCAT("http://src.com/", ENCODE_FOR_URI(?addrPlace))) as ?sourceObj )
+    BIND ( CONCAT(?uliceName, " ", ?streetNum) as ?aLabel)
 
-    FILTER (REGEX(?uliceName, "^[AEIOUY]"))
+    FILTER (REGEX(?uliceName, "^[A]"))
 }
+
