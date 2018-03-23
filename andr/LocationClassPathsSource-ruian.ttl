@@ -1,0 +1,27 @@
+@prefix andr: <http://purl.org/net/andruian/datadef#> .
+@prefix ruian: <http://ruian.linked.opendata.cz/ontology/> .
+@prefix s: <http://schema.org/> .
+
+#
+# A source for location class -> coordinates paths for the RÚIAN registry.
+#
+
+:locClassPathsSource
+    a andr:LocationClassPathsSource;
+    andr:classToLocPath :adresniMistoClassToLocPath;
+    andr:classToLocPath :adresniMistoClassToLocPathB;
+    .
+
+:adresniMistoClassToLocPath
+    a          andr:ClassToLocPath;
+    andr:class <http://classB>;
+    andr:lat   ( <http://A> <http://B> );
+    andr:long  ( <http://X> <http://Y> );
+    .
+
+:adresniMistoClassToLocPathB
+    a          andr:ClassToLocPath;
+    andr:class <http://classC>;
+    andr:lat   ( <http://A> );
+    andr:long  ( <http://X> );
+    .
