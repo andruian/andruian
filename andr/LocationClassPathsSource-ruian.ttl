@@ -2,6 +2,7 @@
 @prefix ruian: <http://ruian.linked.opendata.cz/ontology/> .
 @prefix s: <http://schema.org/> .
 @prefix locsrc: <http://purl.org/net/andruian/location-sources/ruian#> .
+@prefix ogcgml: <http://www.opengis.net/ont/gml#> .
 
 #
 # A source for location class -> coordinates paths for the RÚIAN registry.
