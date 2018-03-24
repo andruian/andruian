@@ -29,7 +29,7 @@
 :sourceClassDef
     a                        andr:SourceClassDef;
     #andr:sparqlEndpoint      "http://melkamar.cz:3030/https/query";
-    andr:sparqlEndpoint      "http://localhost.cz:3030/https/query";
+    andr:sparqlEndpoint      "http://localhost:3030/https/query";
     andr:class               <http://example.org/SourceObjectA>;
     andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
     andr:selectProperty [ a andr:SelectProperty;
