@@ -83,7 +83,7 @@ andr:uri a rdf:Property;
 andr:version a rdf:Property;
     rdfs:label "version";
     rdfs:comment "An integer representing version of the subject of the property.";
-    rdfs:range rdf:Literal^^xsd:integer;
+    rdfs:range xsd:integer;
     .
 
 andr:class a rdf:Property;
@@ -153,10 +153,8 @@ andr:includeRdf a rdf:Property;
     rdfs:comment """Specifies an URL where an RDF file is located. The consumer of this dataset shall download the linked
 file and include the data contained there in their internal model before processing any other properties of the subject.
 
-This property is an analogy to import statements in programming languages - only it imports a remote file.
-
-The range of the property is a Literal and not a Resource because RDF4J cannot parse an IP address as a resource. Probably a bug.""";
-    rdfs:range rdf:Literal;
+This property is an analogy to import statements in programming languages - only it imports a remote file.""";
+    rdfs:range rdf:Resource;
     rdfs:domain andr:LocationClassDef;
     .
     
