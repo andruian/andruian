@@ -10,7 +10,7 @@
     a                 andr:DataDef;
     andr:locationClassDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
-    andr:indexServer  :indexServer;
+    #andr:indexServer  :indexServer;
     skos:prefLabel "Vowel street names";
     .
 
