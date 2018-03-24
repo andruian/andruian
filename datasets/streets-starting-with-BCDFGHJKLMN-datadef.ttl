@@ -52,7 +52,7 @@
 #
 :locationDef
     a                   andr:LocationDef;
-    andr:sparqlEndpoint "https://ruian.linked.opendata.cz/sparql";
+    andr:sparqlEndpoint <https://ruian.linked.opendata.cz/sparql>;
     andr:class          ruian:AdresníMísto;
     andr:classToLocPath :adresniMistoClassToLocPath;
     .
