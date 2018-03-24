@@ -19,7 +19,7 @@
 #
 :indexServer
     a        andr:IndexServer;
-    andr:uri "http://10.0.2.2:8080";
+    andr:uri <http://10.0.2.2:8080>;
     andr:version 1;
     .
 
@@ -28,7 +28,7 @@
 #
 :sourceClassDef
     a                        andr:SourceClassDef;
-    andr:sparqlEndpoint      "http://localhost:3030/foo/query";
+    andr:sparqlEndpoint      <http://localhost:3030/foo/query>;
     andr:class               ex:MyObject;
     andr:pathToLocationClass ( ex:someLink ex:linksTo );
     andr:selectProperty [ a andr:SelectProperty;
@@ -43,7 +43,7 @@
 #
 :locationDef
     a                   andr:LocationDef;
-    andr:sparqlEndpoint "http://ruian.linked.opendata.cz/sparql";
+    andr:sparqlEndpoint <http://ruian.linked.opendata.cz/sparql>;
     andr:class          ruian:AdresniMisto;
     andr:classToLocPath :adresniMistoClassToLocPath;
     .

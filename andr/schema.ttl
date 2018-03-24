@@ -76,10 +76,8 @@ andr:indexServer a rdf:Property;
     
 andr:uri a rdf:Property;
     rdfs:label "uri";
-    rdfs:comment """A link where the subject of the property can be accessed.
-
-The range of the property is a Literal and not a Resource because RDF4J cannot parse an IP address as a resource. Probably a bug.""";
-    rdfs:range rdf:Literal;
+    rdfs:comment "A link where the subject of the property can be accessed.";
+    rdfs:range rdf:Resource;
     .
     
 andr:version a rdf:Property;
@@ -120,10 +118,8 @@ https://www.w3.org/TR/shacl/#property-path-predicate for more details.""";
     
 andr:sparqlEndpoint a rdf:Property;
     rdfs:label "sparqlEndpoint";
-    rdfs:comment """A definition of an URI where a SPARQL endpoint relevant to the property subject may be reached.
-
-The range of the property is a Literal and not a Resource because RDF4J cannot parse an IP address as a resource. Probably a bug.""".
-    rdfs:range rdf:Literal;
+    rdfs:comment "A definition of an URI where a SPARQL endpoint relevant to the property subject may be reached.";
+    rdfs:range rdf:Resource;
     .
     
 andr:sourceClassDef a rdf:Property;
