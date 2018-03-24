@@ -1,5 +1,5 @@
 @prefix andr: <http://purl.org/net/andruian/datadef#> .
-@prefix ruian: <http://ruian.linked.opendata.cz/ontology/> .
+@prefix ruian: <https://ruian.linked.opendata.cz/slovník/> .
 @prefix s: <http://schema.org/> .
 @prefix locsrc: <http://purl.org/net/andruian/location-sources/ruian#> .
 @prefix ogcgml: <http://www.opengis.net/ont/gml#> .
