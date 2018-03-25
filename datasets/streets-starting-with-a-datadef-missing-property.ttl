@@ -8,7 +8,7 @@
 
 #
 
-:dataDefA
+:dataDefATest
     a                 andr:DataDef;
     andr:locationClassDef  :locationDef;
     andr:sourceClassDef :sourceClassDef;
