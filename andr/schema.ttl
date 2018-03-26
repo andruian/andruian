@@ -11,55 +11,67 @@
 
 andr:DataDef a rdfs:Class;
     rdfs:label "DataDef";
-    rdfs:comment """The definition of a single data mapping in the Andruian framework. That is a mapping of Source class 
-instances to instances of the Location class. See https://github.com/andruian/example-data for more information.""";
+    rdfs:comment """The definition of a single data mapping in
+the Andruian framework. That is a mapping of Source class
+instances to instances of the Location class. See
+https://github.com/andruian/example-data for more information.""";
     .
     
 andr:LocationClassDef a rdfs:Class;
     rdfs:label "LocationClassDef";
-    rdfs:comment """The definition of a Location class and its metadata. That includes the SPARQL endpoint where instances  
-of this class may be found and property paths specifying how to get the Location class' latitude and longitude.""";
+    rdfs:comment """The definition of a Location class and its
+metadata. That includes the SPARQL endpoint where instances
+of this class may be found and property paths specifying how to
+get the Location class' latitude and longitude.""";
     .
     
 andr:SourceClassDef a rdfs:Class;
     rdfs:label "SourceClassDef";
-    rdfs:comment """The definition of a Source class and its metadata. That includes the SPARQL endpoint where instances 
-of this class may be found, the property path leading to the linked Location class and properties that should be indexed 
-on the index server for faster retrieval.""";
+    rdfs:comment """The definition of a Source class and its metadata.
+That includes the SPARQL endpoint where instances of this class
+may be found, the property path leading to the linked Location
+class and properties that should be indexed on the index server
+for faster retrieval.""";
     .
     
 andr:SelectPropertyDef a rdfs:Class;
     rdfs:label "SelectPropertyDef";
-    rdfs:comment """Definition of a Source class' property that should be indexed on the index server. The definition 
-specifies name to use for the property and a property path leading to it.""";
+    rdfs:comment """Definition of a Source class' property that
+should be indexed on the index server. The definition specifies
+name to use for the property and a property path leading to it.""";
     .
     
 andr:IndexServer a rdfs:Class;
     rdfs:label "IndexServer";
-    rdfs:comment """An index server for the Andruian framework. It is optional - if not present, clients fall back to 
-naive queries. They are slower though.""";
+    rdfs:comment """An index server for the Andruian framework.
+It is optional - if not present, clients fall back to naive queries.
+They are slower though.""";
     .
 
 andr:LocationClassPathsSource a rdfs:Class;
     rdfs:label "LocationClassPathsSource";
-    rdfs:comment "A source of property paths leading from an instance of a class to its latitude and longitude.";
+    rdfs:comment """A source of property paths leading from an
+instance of a class to its latitude and longitude.""";
     .
     
 andr:ClassToLocPath a rdfs:Class;
     rdfs:label "ClassToLocPath";
-    rdfs:comment "A property path for a particular class leading to its latitude and longitude.";
+    rdfs:comment """A property path for a particular class
+leading to its latitude and longitude.""";
     .
 
 andr:PropertyPath a rdfs:Class;
     rdfs:label "A path of one or more properties";
-    rdfs:comment """This class is equivalent to a predicate sequence SHACL property path.
-SHACL does not define a RDFS class for property paths, but only refers to them as to
-a plain rdf:Resource. andr:PropertyPath class is defined in Andruian data definition schema
+    rdfs:comment """This class is equivalent to a predicate sequence
+SHACL property path. SHACL does not define a RDFS class for property
+paths, but only refers to them as to a plain rdf:Resource.
+andr:PropertyPath class is defined in Andruian data definition schema
 to make the diagram and property domains easily readable.
 
-A predicate or sequence path may be used wherever andr:PropertyPath is expected. A predicate
-path is a single property in place of the object; a sequence path is a RDF list containing
-two or more properties in place of the object.""".
+A predicate or sequence path may be used wherever andr:PropertyPath
+is expected. A predicate path is a single property in place of the object;
+a sequence path is a RDF list containing two or more properties in
+place of the object.""".
 
 ##############
 # Properties #
@@ -70,33 +82,39 @@ two or more properties in place of the object.""".
 #
 andr:sourceClassDef a rdf:Property;
     rdfs:label   "sourceClassDef";
-    rdfs:comment "A definition of the Source Class in the Andruian framework. This class is typically user-defined and links to a Location class.";
+    rdfs:comment """A definition of the Source Class in the Andruian
+framework. This class is typically user-defined and links to a
+Location class.""";
     rdfs:range   andr:SourceClassDef;
     rdfs:domain  andr:DataDef;
     .
  
 andr:indexServer a rdf:Property;
     rdfs:label "indexServer";
-    rdfs:comment "A definition of an Index Server in the Andruian framework. This is an optional property.";
+    rdfs:comment """A definition of an Index Server in the Andruian
+framework. This is an optional property.""";
     rdfs:range andr:IndexServer;
     rdfs:domain  andr:DataDef;
     .
     
 andr:uri a rdf:Property;
     rdfs:label "uri";
-    rdfs:comment "A link where the subject of the property can be accessed.";
+    rdfs:comment """A link where the subject of the property
+can be accessed.""";
     rdfs:range rdf:Resource;
     .
     
 andr:version a rdf:Property;
     rdfs:label "version";
-    rdfs:comment "An integer representing version of the subject of the property.";
+    rdfs:comment """An integer representing version of the subject
+of the property.""";
     rdfs:range xsd:integer;
     .
 
 andr:class a rdf:Property;
     rdfs:label "class";
-    rdfs:comment "A specification of a resource type (class) relevant to the subject of this property.";
+    rdfs:comment """A specification of a resource type (class)
+relevant to the subject of this property.""";
     rdfs:range rdfs:Class;
     .
     
@@ -105,34 +123,40 @@ andr:class a rdf:Property;
 #    
 andr:selectProperty a rdf:Property;
     rdfs:label "selectProperty";
-    rdfs:comment "Defines zero or more andr:SelectProperty instances for the subject of this property. This is an optional property, it may be specified multiple times.";
+    rdfs:comment """Defines zero or more andr:SelectProperty
+instances for the subject of this property. This is an optional
+property, it may be specified multiple times.""";
     rdfs:range andr:SelectProperty;
     rdfs:domain  andr:SourceClassDef;
     .
     
 andr:propertyPath a rdf:Property;
     rdfs:label "propertyPath";
-    rdfs:comment """Defines a property path. The object of this property must be a SHACL predicate or sequence path. See
+    rdfs:comment """Defines a property path. The object
+of this property must be a SHACL predicate or sequence path. See
 https://www.w3.org/TR/shacl/#property-path-predicate for more details.""";
     .
     
 andr:pathToLocationClass a rdf:Property;
     rdfs:label "pathToLocationClass";
-    rdfs:comment """Defines a property path that, when applied to the subject of the property, leads to an instance of 
-the Location Class linked to the subject. The object of this property must be a SHACL predicate or sequence path. See
+    rdfs:comment """Defines a property path that, when applied
+to the subject of the property, leads to an instance of the Location
+Class linked to the subject. The object of this property must be
+a SHACL predicate or sequence path. See
 https://www.w3.org/TR/shacl/#property-path-predicate for more details.""";
     rdfs:domain  andr:SourceClassDef;
     .
     
 andr:sparqlEndpoint a rdf:Property;
     rdfs:label "sparqlEndpoint";
-    rdfs:comment "A definition of an URI where a SPARQL endpoint relevant to the property subject may be reached.";
+    rdfs:comment """A definition of an URI where a SPARQL endpoint
+relevant to the property subject may be reached.""";
     rdfs:range rdf:Resource;
     .
     
 andr:sourceClassDef a rdf:Property;
     rdfs:label "sourceClassDef";
-    rdfs:comment "A Source Class definition for this DataDef.";
+    rdfs:comment """A Source Class definition for this DataDef.""";
     rdfs:range andr:SourceClassDef;
     rdfs:domain  andr:DataDef;
     .
@@ -143,41 +167,53 @@ andr:sourceClassDef a rdf:Property;
 #
 andr:locationClassDef a rdf:Property;
     rdfs:label "locationClassDef";
-    rdfs:comment "A Location Class definition for this DataDef.";
+    rdfs:comment """A Location Class definition for this DataDef.""";
     rdfs:range andr:LocationClassDef;
     rdfs:domain  andr:DataDef;
     .
     
 andr:locationClassPathsSource a rdf:Property;
     rdfs:label "locationClassPathsSource";
-    rdfs:comment """Defines a source object for property paths describing the path from an entity of a given class to the latitude/longitude 
-coordinates associated with such class. The object of this property will link to one or more property path definitions.""";
+    rdfs:comment """Defines a source object for property paths
+describing the path from an entity of a given class to the
+latitude/longitude coordinates associated with such class. The
+object of this property will link to one or more property path definitions.""";
     rdfs:range andr:LocationClassPathsSource;
     rdfs:domain  andr:LocationClassDef;
     .
 
 andr:includeRdf a rdf:Property;
     rdfs:label "includeRdf";
-    rdfs:comment """Specifies an URL where an RDF file is located. The consumer of this dataset shall download the linked
-file and include the data contained there in their internal model before processing any other properties of the subject.
+    rdfs:comment """Specifies an URL where an RDF file is
+located. The consumer of this dataset shall download the linked file
+and include the data contained there in their internal model
+before processing any other properties of the subject.
 
-This property is an analogy to import statements in programming languages - only it imports a remote file.""";
+This property is an analogy to import statements in programming
+languages - only it imports a remote file.""";
     rdfs:range rdf:Resource;
     rdfs:domain andr:LocationClassDef;
     .
     
 andr:classToLocPath a rdf:Property;
     rdfs:label "classToLocPath";
-    rdfs:comment "Defines property paths for a single resource type (class), leading from an object of such class to its latitude/longitude.";
+    rdfs:comment """Defines property paths for a single resource
+type (class), leading from an object of such class to its latitude/longitude.""";
     rdfs:range andr:ClassToLocPath;
     .
     
 andr:latPath a rdf:Property;
     rdfs:label "latPath";
-    rdfs:comment "Defines a property path linking to the latitude coordinate. The object of this property must be a SHACL predicate or sequence path. See https://www.w3.org/TR/shacl/#property-path-predicate for more details.";
+    rdfs:comment """Defines a property path linking to the latitude
+coordinate. The object of this property must be a SHACL predicate
+or sequence path. See https://www.w3.org/TR/shacl/#property-path-predicate
+for more details.""";
     .
     
 andr:longPath a rdf:Property;
     rdfs:label "longPath";
-    rdfs:comment "Defines a property path linking to the longitude coordinate. The object of this property must be a SHACL predicate or sequence path. See https://www.w3.org/TR/shacl/#property-path-predicate for more details.";
+    rdfs:comment """Defines a property path linking to the longitude
+coordinate. The object of this property must be a SHACL predicate
+or sequence path. See https://www.w3.org/TR/shacl/#property-path-predicate
+for more details.""";
     .
