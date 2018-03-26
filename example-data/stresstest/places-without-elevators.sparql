@@ -1,0 +1,39 @@
+CONSTRUCT {
+?sourceObj a <http://example.org/SourceObjectStress/elevator/without>;
+<http://a.property> ?firstObj;
+<http://www.w3.org/2004/02/skos/core#prefLabel> ?aLabel
+.
+
+?firstObj
+    a <http://example.org/FirstObject>;
+    <http://psc.org> ?psc;
+    <http://a.property> ?secondObj.
+
+?secondObj
+    a <http://example.org/SecondObject>;
+    <http://number.prop> ?streetNum;
+    <http://name.prop> ?uliceName;
+    <http://link.to.ruian> ?addrPlace.
+WHERE {
+?obec a ruian:Obec;
+          schema:name ?obecName.
+
+    ?ulice a ruian:Ulice;
+           ruian:obec ?obec;
+           schema:name ?uliceName .
+
+    ?addrPlace a ruian:AdresníMísto;
+               ruian:ulice ?ulice;
+               ruian:psč ?psc;
+               ruian:čísloOrientační ?streetNum;
+               ruian:stavebníObjekt ?stavObjekt
+               .
+
+    ?stavObjekt ruian:vybaveníVýtahem <https://ruian.linked.opendata.cz/slovník/stavební-objekty/VybaveniVytahem#2>
+
+    BIND ( IRI(CONCAT("http://another.com/", ENCODE_FOR_URI(?addrPlace))) as ?secondObj )
+    BIND ( IRI(CONCAT("http://example.com/", ENCODE_FOR_URI(?addrPlace))) as ?firstObj )
+    BIND ( IRI(CONCAT("http://src.com/stress/withoutelevator/", ENCODE_FOR_URI(?addrPlace))) as ?sourceObj )
+    BIND ( CONCAT(?uliceName, " ", ?streetNum) as ?aLabel)
+}
+

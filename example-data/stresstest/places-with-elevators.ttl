@@ -1,0 +1,60 @@
+@prefix andr: <http://purl.org/net/andruian/datadef#> .
+@prefix ruian: <https://ruian.linked.opendata.cz/slovník/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix s: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+@prefix : <http://foo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#
+
+:dataDefPlacesWithElevators
+    a                 andr:DataDef;
+    andr:locationClassDef  :locationDef;
+    andr:sourceClassDef :sourceClassDef;
+    andr:indexServer  :indexServer;
+    skos:prefLabel "Address places with elevators";
+    .
+
+#
+# INDEX SERVER
+#
+:indexServer
+    a        andr:IndexServer;
+    andr:uri <http://andruian.melkamar.cz>;
+    andr:version 1;
+    .
+
+#
+# DATA DEFINITION
+#
+:sourceClassDef
+    a                        andr:SourceClassDef;
+    andr:sparqlEndpoint      <http://andruian.melkamar.cz:3030/elevators/query>;
+    andr:class               <http://example.org/SourceObjectStress/elevator/with>;
+    andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "PSC";
+                          andr:propertyPath ( <http://a.property> <http://psc.org> )
+                        ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "StreetNum";
+                          andr:propertyPath ( <http://a.property> <http://a.property> <http://number.prop> )
+                        ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "StreetName";
+                          andr:propertyPath ( <http://a.property> <http://a.property> <http://name.prop> )
+                        ];
+    .
+
+
+#
+# LOCATION DEFINITON
+#
+:locationDef
+    a                   andr:LocationDef;
+    andr:sparqlEndpoint <https://ruian.linked.opendata.cz/sparql>;
+    andr:class          ruian:AdresníMísto;
+    andr:includeRdf <http://purl.org/net/andruian/location-sources/ruian>;
+    andr:locationClassPathsSource <http://purl.org/net/andruian/location-sources/ruian#locClassPathsSource>;
+    .
