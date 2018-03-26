@@ -11,21 +11,21 @@
 
 locsrc:locClassPathsSource
     a andr:LocationClassPathsSource;
-    andr:classToLocPath locsrc:stat;
-    andr:classToLocPath locsrc:kraj;
-    andr:classToLocPath locsrc:okres;
-    andr:classToLocPath locsrc:regionSoudrznosti;
-    andr:classToLocPath locsrc:vusc;
-    andr:classToLocPath locsrc:obec;
-    andr:classToLocPath locsrc:castobce;
-    andr:classToLocPath locsrc:katastralniuzemi;
-    andr:classToLocPath locsrc:zsj;
-    andr:classToLocPath locsrc:parcela;
-    andr:classToLocPath locsrc:momc;
-    andr:classToLocPath locsrc:mop;
-    andr:classToLocPath locsrc:spravniobvod;
-    andr:classToLocPath locsrc:stavebniobjekt;
-    andr:classToLocPath locsrc:adresniMisto;
+    andr:classToLocPath locsrc:stat,
+                        locsrc:kraj,
+                        locsrc:okres,
+                        locsrc:regionSoudrznosti,
+                        locsrc:vusc,
+                        locsrc:obec,
+                        locsrc:castobce,
+                        locsrc:katastralniuzemi,
+                        locsrc:zsj,
+                        locsrc:parcela,
+                        locsrc:momc,
+                        locsrc:mop,
+                        locsrc:spravniobvod,
+                        locsrc:stavebniobjekt,
+                        locsrc:adresniMisto
     .
 
 locsrc:stat
