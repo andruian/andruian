@@ -30,7 +30,7 @@
 #
 :sourceClassDef
     a                        andr:SourceClassDef;
-    andr:sparqlEndpoint      <http://andruian.melkamar.cz:3030/elevators/query>;
+    andr:sparqlEndpoint      <http://andruian.melkamar.cz:3030/withoutelevators/query>;
     andr:class               <http://example.org/SourceObjectStress/elevator/without>;
     andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
     andr:selectProperty [ a andr:SelectProperty;
