@@ -32,103 +32,103 @@ locsrc:stat
     a          andr:ClassToLocPath;
     andr:class ruian:Stát;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:kraj
     a          andr:ClassToLocPath;
     andr:class ruian:Kraj1960;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:okres
     a          andr:ClassToLocPath;
     andr:class ruian:Okres;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:regionSoudrznosti
     a          andr:ClassToLocPath;
     andr:class ruian:RegionSoudrznosti;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:vusc
     a          andr:ClassToLocPath;
     andr:class ruian:Vusc;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:obec
     a          andr:ClassToLocPath;
     andr:class ruian:Obec;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:castobce
     a          andr:ClassToLocPath;
     andr:class ruian:ČástObce;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:katastralniuzemi
     a          andr:ClassToLocPath;
     andr:class ruian:KatastrálníÚzemí;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:zsj
     a          andr:ClassToLocPath;
     andr:class ruian:Zsj;
     andr:lat   ( ruian:definičníBod ogcgml:pointMember s:geo s:latitude );
-    andr:long  ( ruian:definičníBod ogcgml:pointMember s:geo s:longitude );
+    andr:long  ( ruian:definičníBod ogcgml:pointMember s:geo s:longitude )
     .
 
 locsrc:parcela
     a          andr:ClassToLocPath;
     andr:class ruian:Parcela;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:momc
     a          andr:ClassToLocPath;
     andr:class ruian:Momc;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:mop
     a          andr:ClassToLocPath;
     andr:class ruian:Mop;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:spravniobvod
     a          andr:ClassToLocPath;
     andr:class ruian:SprávníObvod;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:stavebniobjekt
     a          andr:ClassToLocPath;
     andr:class ruian:StavebníObjekt;
     andr:lat   ( ruian:definičníBod s:geo s:latitude );
-    andr:long  ( ruian:definičníBod s:geo s:longitude );
+    andr:long  ( ruian:definičníBod s:geo s:longitude )
     .
 
 locsrc:adresniMisto
     a          andr:ClassToLocPath;
     andr:class ruian:AdresníMísto;
     andr:lat   ( ruian:adresníBod s:geo s:latitude );
-    andr:long  ( ruian:adresníBod s:geo s:longitude );
+    andr:long  ( ruian:adresníBod s:geo s:longitude )
     .
