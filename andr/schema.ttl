@@ -2,10 +2,8 @@
 @prefix sp: <http://spinrdf.org/sp#> .
 @prefix s: <http://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-#TODO Change rdfs:label to be human-readable names, as per https://www.w3.org/2001/sw/RDFCore/Schema/200203/#ch_label
-
-#TODO maybe allow includeRdf just on the DataDef and there you have to include all external rdfs?
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ###########
 # Classes #
@@ -52,6 +50,16 @@ andr:ClassToLocPath a rdfs:Class;
     rdfs:comment "A property path for a particular class leading to its latitude and longitude.";
     .
 
+andr:PropertyPath a rdfs:Class;
+    rdfs:label "A path of one or more properties";
+    rdfs:comment """This class is equivalent to a predicate sequence SHACL property path.
+SHACL does not define a RDFS class for property paths, but only refers to them as to
+a plain rdf:Resource. andr:PropertyPath class is defined in Andruian data definition schema
+to make the diagram and property domains easily readable.
+
+A predicate or sequence path may be used wherever andr:PropertyPath is expected. A predicate
+path is a single property in place of the object; a sequence path is a RDF list containing
+two or more properties in place of the object.""".
 
 ##############
 # Properties #
