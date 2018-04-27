@@ -1,0 +1,50 @@
+@prefix andr: <http://purl.org/net/andruian/datadef#> .
+@prefix ruian: <https://ruian.linked.opendata.cz/slovník/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix s: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+@prefix : <http://foo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#
+
+:dataDefANoIdx1500
+    a                 andr:DataDef;
+    andr:locationClassDef  :locationDef;
+    andr:sourceClassDef :sourceClassDef;
+    skos:prefLabel "Test of various sizes without indexing";
+    .
+
+#
+# DATA DEFINITION
+#
+:sourceClassDef
+    a                        andr:SourceClassDef;
+    andr:sparqlEndpoint      <http://andruian.melkamar.cz:3030/sizes1500/query>;
+    andr:class               <http://example.org/SourceObject1500>;
+    andr:pathToLocationClass ( <http://a.property> <http://a.property> <http://link.to.ruian> );
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "PSC";
+                          andr:propertyPath ( <http://a.property> <http://psc.org> )
+                        ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "StreetNum";
+                          andr:propertyPath ( <http://a.property> <http://a.property> <http://number.prop> )
+                        ];
+    andr:selectProperty [ a andr:SelectProperty;
+                          s:name "StreetName";
+                          andr:propertyPath ( <http://a.property> <http://a.property> <http://name.prop> )
+                        ];
+    .
+
+
+#
+# LOCATION DEFINITON
+#
+:locationDef
+    a                   andr:LocationDef;
+    andr:sparqlEndpoint <https://ruian.linked.opendata.cz/sparql>;
+    andr:class          ruian:AdresníMísto;
+    andr:includeRdf <http://purl.org/net/andruian/location-sources/ruian>;
+    andr:locationClassPathsSource <http://purl.org/net/andruian/location-sources/ruian#locClassPathsSource>;
+    .
