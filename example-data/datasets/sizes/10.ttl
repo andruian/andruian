@@ -1,0 +1,103 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://example.org/> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21909423>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"Adamovsk\u00E1"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21909423> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21931739>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"And\u011Blova"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21931739> .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21909423>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21909423> ;
+	<http://psc.org>	14000 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21931739>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21931739> ;
+	<http://psc.org>	14300 .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21915181>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"Obchodn\u00ED n\u00E1m\u011Bst\u00ED"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21915181> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21948402>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"U Libu\u0161in\u00FDch l\u00E1zn\u00ED"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21948402> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21934185>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"U \u010Dek\u00E1rny"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21934185> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21955565>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"U Jednoty"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21955565> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21926166>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"Odbo\u010Dn\u00E1"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21926166> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21905479>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"U Hellady"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21905479> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21932646>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"U zast\u00E1vky"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21932646> .
+<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21950288>	rdf:type	ns1:SecondObject ;
+	<http://number.prop>	1 ;
+	<http://name.prop>	"U gymn\u00E1zia"@cs ;
+	<http://link.to.ruian>	<https://ruian.linked.opendata.cz/zdroj/adresn\u00ED-m\u00EDsta/21950288> .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21915181>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21915181> ;
+	<http://psc.org>	14300 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21948402>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21948402> ;
+	<http://psc.org>	14000 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21934185>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21934185> ;
+	<http://psc.org>	14300 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21955565>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21955565> ;
+	<http://psc.org>	14200 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21926166>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21926166> ;
+	<http://psc.org>	14300 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21905479>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21905479> ;
+	<http://psc.org>	14000 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21932646>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21932646> ;
+	<http://psc.org>	14300 .
+<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21950288>	rdf:type	ns1:FirstObject ;
+	<http://a.property>	<http://another.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21950288> ;
+	<http://psc.org>	14000 .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21931739>	rdf:type	ns1:SourceObject10 .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21931739>	skos:prefLabel	"And\u011Blova 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21931739> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21915181>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"Obchodn\u00ED n\u00E1m\u011Bst\u00ED 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21915181> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21948402>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"U Libu\u0161in\u00FDch l\u00E1zn\u00ED 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21948402> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21909423>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"Adamovsk\u00E1 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21909423> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21934185>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"U \u010Dek\u00E1rny 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21934185> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21955565>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"U Jednoty 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21955565> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21926166>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"Odbo\u010Dn\u00E1 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21926166> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21905479>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"U Hellady 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21905479> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21932646>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"U zast\u00E1vky 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21932646> .
+<http://src.com/10/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21950288>	rdf:type	ns1:SourceObject10 ;
+	skos:prefLabel	"U gymn\u00E1zia 1" ;
+	<http://a.property>	<http://example.com/https%3A%2F%2Fruian.linked.opendata.cz%2Fzdroj%2Fadresn\u00ED-m\u00EDsta%2F21950288> .
