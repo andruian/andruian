@@ -11,3 +11,4 @@
   there are 10 source classes linking to 10 intermediate classes, linking to 10 more intermediate classes, linking to 
   10 RÚIAN classes. 
 - See [construct-query.sparql](construct-query.sparql) to see how they were created (with slight adjustments) 
+- Each dataset has 10x more actual triples than its name. 10.ttl contains 100 triples.
