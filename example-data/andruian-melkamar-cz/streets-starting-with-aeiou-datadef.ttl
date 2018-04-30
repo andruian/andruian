@@ -51,15 +51,15 @@
 #
 :locationDef
     a                   andr:LocationDef;
-    andr:sparqlEndpoint <https://ruian.linked.opendata.cz/sparql>;
-    andr:class          ruian:AdresníMísto;
-    andr:classToLocPath :adresniMistoClassToLocPath;
-    .
+    andr:sparqlEndpoint
+        <https://ruian.linked.opendata.cz/sparql>;
 
-# Description of how to get from object ruian:AdresniMisto to its lat/long coordinates
-:adresniMistoClassToLocPath
-    a          andr:ClassToLocPath;
-    andr:class ruian:AdresníMísto;
-    andr:lat   ( ruian:adresníBod s:geo s:latitude );
-    andr:long  ( ruian:adresníBod s:geo s:longitude );
+    andr:class          ruian:AdresníMísto;
+
+    andr:includeRdf
+        <http://purl.org/net/andruian/location-sources/ruian>;
+
+    andr:locationClassPathsSource
+        <http://purl.org/net/andruian/location-sources/
+                              ruian#locClassPathsSource>;
     .
