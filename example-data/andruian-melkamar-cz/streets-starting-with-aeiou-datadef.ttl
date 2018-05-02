@@ -60,6 +60,5 @@
         <http://purl.org/net/andruian/location-sources/ruian>;
 
     andr:locationClassPathsSource
-        <http://purl.org/net/andruian/location-sources/
-                              ruian#locClassPathsSource>;
+        <http://purl.org/net/andruian/location-sources/ruian#locClassPathsSource>
     .
